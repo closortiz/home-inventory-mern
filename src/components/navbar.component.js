@@ -10,7 +10,13 @@ export default class Navbar extends Component {
                 <div className="collapse navbar-collapse">
                     <ul className="navbar-nav mr-auto">
                         <li className="navbar-item">
-                            <Link to="/" className="nav-link">Product Lookup</Link>
+                            <Link to="/" className="nav-link">Add inventory items</Link>
+                        </li>
+                        <li className="navbar-item">
+                            <Link to="/rooms" className="nav-link">Add a room</Link>
+                        </li>
+                        <li className="navbar-item">
+                            <Link to="/units" className="nav-link">Add a unit</Link>
                         </li>
                     </ul>
                 </div>
