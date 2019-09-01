@@ -2,10 +2,9 @@
   "name": "home-inventory-mern",
   "version": "0.1.0",
   "private": true,
-  "proxy": "https://api.upcitemdb.com",
   "dependencies": {
     "axios": "^0.19.0",
-    "cors": "^2.8.5",
+    "http-proxy-middleware": "^0.19.1",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-router-dom": "^5.0.1",
