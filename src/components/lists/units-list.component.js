@@ -27,7 +27,7 @@ export default class UnitsList extends Component {
 
     listUnits() {
         return this.state.units.map(currentUnit => {
-            return <Unit unit={currentUnit} />//deleteExcercise={this.deleteExcercise} key={currentexercise._id}
+            return <Unit key={currentUnit.identifier} unit={currentUnit} />//deleteExcercise={this.deleteExcercise} key={currentexercise._id}
         })
     }
 

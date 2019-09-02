@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 export default class Product extends Component {
     constructor(props) {
         super(props);
@@ -22,6 +23,7 @@ export default class Product extends Component {
         const constHeight = {
             height: "420px;!important",
         }
+        const detailsURI = "/products/" + this.state.product._id
 
         return (
             <div style={imgStyle} className="col-xl-3 col-md-6 mb-4">
@@ -34,6 +36,12 @@ export default class Product extends Component {
                         <p><b>Model:</b> {this.state.product.brand !== undefined && this.state.product.brand.model > 0 ? this.state.product.model : "n/a"}</p>
                         <p><b>Color:</b> {this.state.product.brand !== undefined && this.state.product.brand.color > 0 ? this.state.product.color : "n/a"}</p>
                     </div>
+                    <Link to={detailsURI} className="nav-link">
+                        <button className="btn btn-primary">
+                            <i className="far fa-fw  fa-plus-square"></i>
+                            <span>View Details</span>
+                        </button>
+                    </Link>
                 </div >
             </div>
         )

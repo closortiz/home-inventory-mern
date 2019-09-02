@@ -11,6 +11,12 @@ export default class Navbar extends Component {
                     <div className="sidebar-brand-text mx-3">Home Inventory</div>
                 </Link>
                 <hr className="sidebar-divider my-0" />
+                <li className="nav-item">
+                    <Link to="/inventory/storage/add" className="nav-link">
+                        <i className="far fa-fw fa-plus-square"></i>
+                        <span>Store An Item</span>
+                    </Link>
+                </li>
                 <div className="sidebar-heading">
                     Room
                 </div>
