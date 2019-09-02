@@ -1,17 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
-
-const Product = props => (
-    <div>
-        <h3>{props.product.title} - {props.product.upc}</h3>
-        <h4>Brand: {props.product.brand}</h4>
-        <h4>Model: {props.product.model}</h4>
-        <h4>Color: {props.product.color}</h4>
-        <p>{props.product.description}</p>
-        <img src={props.product.images[0]} alt="product" />
-    </div>
-)
+import Product from "./objects/product.component";
 
 export default class ProductLookup extends Component {
     constructor(props) {
@@ -88,8 +78,17 @@ export default class ProductLookup extends Component {
     }
 
     productAdded() {
+        const center = {
+            textAlign: 'center'
+        }
+
         if (this.state.last_product_added !== undefined) {
-            return <Product product={this.state.last_product_added} />
+            return (
+                <div >
+                    <h2 style={center} >Product was added or updated</h2>
+                    <Product product={this.state.last_product_added} />
+                </div>
+            )
         }
 
     }
